@@ -3,10 +3,11 @@
 
 function filterRange(arr, a, b) {
     //write your code here
+    return arr.filter((item) => item >= a && item <= b)
   }
   
   let arr = [5, 3, 8, 1];
-  
+
   let filtered = filterRange(arr, 1, 4);
   
   console.log( filtered ); // 3,1 (matching values)
@@ -17,10 +18,16 @@ function filterRange(arr, a, b) {
 //2
   function filterRangeInPlace(arr, a, b) {
     //write your code here
+    let filtered = filterRange(arr, a, b)
+      arr = filtered;
+       return arr;
+
   }
+  
   
   let array = [5, 3, 8, 1];
   
-  filterRangeInPlace(array, 1, 4); // removed the numbers except from 1 to 4
+  const filterRang = filterRangeInPlace(array, 1, 4); // removed the numbers except from 1 to 4
   
   console.log( array ); // [3, 1]
+  console.log(filterRang);
