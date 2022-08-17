@@ -16,18 +16,15 @@ function filterRange(arr, a, b) {
 
 //Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
 //2
-  function filterRangeInPlace(arr, a, b) {
-    //write your code here
-    let filtered = filterRange(arr, a, b)
-      arr = filtered;
-       return arr;
-
+function filterRangeInPlace(arr, a, b) {
+  //write your code here
+  let filtered = filterRange(arr, a, b);
+  arr.length = 0;
+  for (item of filtered){
+  arr.push(item);
   }
-  
-  
+  // return arr;
+  }
   let array = [5, 3, 8, 1];
-  
-  const filterRang = filterRangeInPlace(array, 1, 4); // removed the numbers except from 1 to 4
-  
-  console.log( array ); // [3, 1]
-  console.log(filterRang);
+  filterRangeInPlace(array, 1, 4); // removed the numbers except from 1 to 4
+  console.log(array); // [3, 1] 
